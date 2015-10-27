@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Angular 2 QuickStart</title>
+    <!-- Required libraries -->
+	  <!-- <script src="https://code.angularjs.org/tools/system.js"></script> -->
+    <!-- <script src="https://code.angularjs.org/tools/typescript.js"></script> -->
+    <!-- <script src="https://code.angularjs.org/2.0.0-alpha.44/angular2.dev.js"></script> -->
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script>
+      // Ask System.js to compile our Typescript code into Javascript in the browser
+      // It may be quicker to write the app in Typescript, but transpiling in-browser will get very slow as the app grows.
+      // Best to compile locally and push the generated Javascript to the server.
+      //
+      // System.config({
+        // transpiler: 'typescript',
+        // typescriptOptions: { emitDecoratorMetadata: true }
+      // });
+      // System.import('./app.ts');
+      
+      // System.js reconfigured to expect .js files by default.
+      System.config({
+        packages: {'app': {defaultExtension: 'js'}}
+      });
+      // Import main application file
+      // System.import('app/app');
+      System.import('app/main');
+    </script>
+    <!-- Would import the app as written in Javascript this way -->
+    <!-- <script src="app.js"></script> -->
+  </head>
+  <body bgcolor="#DDDDDD">
+	  <!-- Placeholder for application root -->
+    <!-- <my-app>loading...</my-app> -->
+    <tutorial-app>loading...</tutorial-app>
+  </body>
+</html>

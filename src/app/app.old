@@ -1,0 +1,28 @@
+// Javascript
+
+// Sorround in an IIFE (Immediately Invoked Function Execution) wrapper to avoid variables going into the global namespace
+(function () {
+// .Component:
+//   selector - names the host HTML element of the component
+//     Angular displays an instance of AppComponent on declaration of a <my-app> HTML element
+//   template - HTML to be displayed inside the component (defined inline here)
+//
+// .Class:
+//   contains properties and methods
+//   Bare minimum implementation contains an empty ('no op' constructor)
+var AppComponent = ng
+  .Component({
+    selector: 'my-app',
+    template: '<h1>Hi mum!</h1>'
+  })
+  .Class({
+    constructor: function () { }
+  });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+  // Start app with the AppComponent at the application root.
+  // The application will eventually consist of more components arranged in a tree branching from the root.  
+  ng.bootstrap(AppComponent);
+});
+
+})();
