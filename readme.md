@@ -56,3 +56,11 @@ npm run tsc
 
 in terminal in app folder root.
 Can leave this running to watch for changes to .ts files and compile into JavaScript.
+
+## Run the app
+
+```
+npm start
+```
+
+in terminal in root/src/app.
