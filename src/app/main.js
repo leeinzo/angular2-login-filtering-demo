@@ -34,5 +34,5 @@ var TutorialApp = (function () {
     return TutorialApp;
 })();
 // Make this 'main' view and the UserService (containing user array) available on app initialization
-angular2_1.bootstrap(TutorialApp, [userService_1.UserService]);
+angular2_1.bootstrap(TutorialApp, [angular2_1.bind(userService_1.UserService).toClass(userService_1.UserService)]);
 //# sourceMappingURL=main.js.map

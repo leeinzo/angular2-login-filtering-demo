@@ -1,4 +1,4 @@
-import {bootstrap, Component, View} from "angular2/angular2";
+import {bootstrap, Component, View, bind} from "angular2/angular2";
 // Import the exported todoInput class from src/app
 import {InputForm} from "./inputForm";
 // UserService is initially an empty array
@@ -25,4 +25,4 @@ import {UserList} from "./userList";
 class TutorialApp{}
 
 // Make this 'main' view and the UserService (containing user array) available on app initialization
-bootstrap(TutorialApp, [UserService]);
+bootstrap(TutorialApp, [bind(UserService).toClass(UserService)]);

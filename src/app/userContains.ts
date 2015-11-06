@@ -11,7 +11,6 @@ import {Pipe} from "angular2/angular2";
 // It has been made re-usable, so any field or term can be passed into it.
 export class UserContains {
 	transform(value, [field, term]) {
-		console.log(field + " " + term);
-		return value.filter((item)=> item[field].includes(term));
+		return value.filter((item)=> item[field.toLowerCase()].includes(term.toLowerCase()));
 	}
 }

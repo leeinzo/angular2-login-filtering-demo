@@ -1,5 +1,5 @@
 // Imported NgClass so we can define the user-renderer component's template's appearance by a property of the model passed
-//  into the component. 
+//  into the component.
 import {Component, View, Input, NgClass, NgIf} from "angular2/angular2";
 import {UserModel} from "./userService";
 
@@ -81,7 +81,9 @@ import {UserModel} from "./userService";
 			width: 50%;
 			max-width: 800px;
 			min-width: 480px;
-			margin: 0 auto;
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
 			padding: 10px;
 			font-family: Tahoma, Geneva, sans-serif;
 			font-size: 14px;
@@ -145,7 +147,7 @@ import {UserModel} from "./userService";
 	// The NgIf directive is used to hide or show the 'Activate' and 'Deactivate' buttons accordingly, dependent on the
 	//  current status of the user.
 	template:
-	` 
+	`
 		<div [ng-class]="user.status">
 			<div class="userpanel">
 				<div class="userpanel-header">

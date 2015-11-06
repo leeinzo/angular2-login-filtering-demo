@@ -9,7 +9,7 @@ import {UserService, UserModel} from "./userService";
 // [older code]
 // Identify each input field using the '#[input field name]' tag
 // Those fields can then be accessed in the (click) event from the button
-// Note that the tag is converted to camelCase when we reference it in the onClick event. 
+// Note that the tag is converted to camelCase when we reference it in the onClick event.
 //
 // N.B. no such thing as ng-click anymore in Angular1, i.e. the click event is its own directive
 // In Angular2, every possible event is handled by using the parentheses and listening for specific native or custom events.
@@ -115,18 +115,20 @@ import {UserService, UserModel} from "./userService";
 
 // Handle the (click) event in the template - here displays the inputted values to console
 export class InputForm{
-	
+
 	// Give class userModel property, bound to the userModel references in template
 	userModel: UserModel = new UserModel;
-	
+	userService: UserService;
+
 	constructor(
 		// Make user of the userService array
 		// Making it public exposes it to the class
 		public userService:UserService
+
 	){
-		console.log(userService);
+		this.userService = userService;
 	}
-	
+
 	onSubmit() {
 		// Call addUser method of UserService
 		this.userService.addUser(this.userModel);

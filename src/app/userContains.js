@@ -15,8 +15,7 @@ var UserContains = (function () {
     }
     UserContains.prototype.transform = function (value, _a) {
         var field = _a[0], term = _a[1];
-        console.log(field + " " + term);
-        return value.filter(function (item) { return item[field].includes(term); });
+        return value.filter(function (item) { return item[field.toLowerCase()].includes(term.toLowerCase()); });
     };
     UserContains = __decorate([
         angular2_1.Pipe({

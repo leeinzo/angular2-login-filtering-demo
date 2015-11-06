@@ -20,7 +20,7 @@ var InputForm = (function () {
         this.userService = userService;
         // Give class userModel property, bound to the userModel references in template
         this.userModel = new userService_1.UserModel;
-        console.log(userService);
+        this.userService = userService;
     }
     InputForm.prototype.onSubmit = function () {
         // Call addUser method of UserService

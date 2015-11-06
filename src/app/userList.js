@@ -17,7 +17,15 @@ var userContains_1 = require("./userContains");
 var userSearch_1 = require("./userSearch");
 var UserList = (function () {
     function UserList(userService) {
+        var _this = this;
         this.userService = userService;
+        this.users = new Array();
+        // Populate initial value for users array
+        this.users = userService.users.userList;
+        // Get a reference to the observable property of UserService's ObservableUserList - whenever a new item is
+        //   added to the list through the input-form component, this observable will fire a message containing
+        //   the updated array.
+        this.userService.users.getObservable().subscribe(function (x) { return _this.users = x; });
     }
     UserList = __decorate([
         angular2_1.Component({
@@ -26,7 +34,7 @@ var UserList = (function () {
         angular2_1.View({
             pipes: [userContains_1.UserContains],
             directives: [angular2_1.NgFor, userRenderer_1.UserRenderer, angular2_1.NgIf, userSearch_1.UserSearch],
-            template: "\n\t<user-search #user-search></user-search>\n\t<div>\n\t\t<user-renderer *ng-for=\"#user of userService.users | userContains: 'username':userSearch.searchTerm\" \n\t\t\t[user]=\"user\"></user-renderer>\n\t</div>\n\t"
+            template: "\n\t<user-search #user-search></user-search>\n\t<div>\n\t\t<!-- <user-renderer *ng-for=\"#user of userService.users | userContains: 'username':userSearch.searchTerm\" -->\n\t\t<user-renderer *ng-for=\"#user of users | userContains: 'username':userSearch.searchTerm\"\n\t\t\t[user]=\"user\"></user-renderer>\n\t</div>\n\t"
         }), 
         __metadata('design:paramtypes', [userService_1.UserService])
     ], UserList);

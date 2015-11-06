@@ -56,9 +56,12 @@ import {UserService} from "./userService";
 })
 
 export class UserSearch {
+
 	searchTerm:string = "";
 	
 	constructor(
 		public userService:UserService
-	){}
+	){
+
+	}
 }
