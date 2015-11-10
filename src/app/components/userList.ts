@@ -1,10 +1,9 @@
 // Need to import NgFor directive to use Angular2's looping function.
 import {Component, View, NgFor, NgIf} from "angular2/angular2";
-import {UserService} from "./userService";
+import {UserService, UserModel} from "../services/userService";
 import {UserRenderer} from "./userRenderer";
-import {UserContains} from "./userContains";
-import {UserSearch} from "./userSearch";
-import {UserModel} from "./userService";
+import {UserContains} from "../utils/userContains";
+import {UserSearch} from "../components/userSearch";
 
 import * as Rx from "rx";
 
@@ -31,7 +30,6 @@ import * as Rx from "rx";
 	`
 	<user-search #user-search></user-search>
 	<div>
-		<!-- <user-renderer *ng-for="#user of userService.users | userContains: 'username':userSearch.searchTerm" -->
 		<user-renderer *ng-for="#user of users | userContains: 'username':userSearch.searchTerm"
 			[user]="user"></user-renderer>
 	</div>
@@ -47,7 +45,7 @@ export class UserList {
 	constructor(
 		public userService:UserService
 	){
-		this.users = new Array<UserModel>;
+		this.users = new Array<UserModel>();
 
 		// Populate initial value for users array
 		this.users = userService.users.userList;

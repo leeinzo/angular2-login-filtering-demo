@@ -1,5 +1,5 @@
 import {Component, View, FORM_DIRECTIVES, NgIf} from "angular2/angular2";
-import {UserService} from "./userService";
+import {UserService} from "../services/userService";
 
 @Component({
 	selector: 'user-search'
@@ -58,7 +58,7 @@ import {UserService} from "./userService";
 export class UserSearch {
 
 	searchTerm:string = "";
-	
+
 	constructor(
 		public userService:UserService
 	){

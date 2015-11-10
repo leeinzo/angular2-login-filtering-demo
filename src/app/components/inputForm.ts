@@ -1,6 +1,6 @@
 // Imported the array of directives FORM_DIRECTIVES for use when creating forms.
 import {Component, View, FORM_DIRECTIVES} from "angular2/angular2";
-import {UserService, UserModel} from "./userService";
+import {UserService, UserModel} from "../services/userService";
 
 @Component({
 	selector: 'input-form'

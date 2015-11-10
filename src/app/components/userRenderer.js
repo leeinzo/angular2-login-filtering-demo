@@ -12,7 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 // Imported NgClass so we can define the user-renderer component's template's appearance by a property of the model passed
 //  into the component.
 var angular2_1 = require("angular2/angular2");
-var userService_1 = require("./userService");
+var userService_1 = require("../services/userService");
 var UserRenderer = (function () {
     function UserRenderer() {
     }

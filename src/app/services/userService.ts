@@ -86,5 +86,3 @@ export class UserService {
 		this.users.addUser(newUser);
 	}
 }
-
-

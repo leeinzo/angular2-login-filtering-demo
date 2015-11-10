@@ -11,10 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var angular2_1 = require("angular2/angular2");
 // Import the exported todoInput class from src/app
-var inputForm_1 = require("./inputForm");
+var inputForm_1 = require("./components/inputForm");
 // UserService is initially an empty array
-var userService_1 = require("./userService");
-var userList_1 = require("./userList");
+var userService_1 = require("./services/userService");
+var userList_1 = require("./components/userList");
 var TutorialApp = (function () {
     function TutorialApp() {
     }

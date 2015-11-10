@@ -1,5 +1,5 @@
 ## Get site going:
-	
+
 ```
 npm init -y
 npm i angular2@2.0.0-alpha.44 systemjs@0.19.2 --save --save-exact
@@ -44,7 +44,7 @@ system.js has been reconfigured to expect .js files by default.
     "noImplicitAny": false
   }
 }
-``` 
+```
 
 Tells editor how to interpret the TypeScript code.
 

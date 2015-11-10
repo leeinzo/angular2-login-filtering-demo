@@ -1,9 +1,9 @@
 import {bootstrap, Component, View, bind} from "angular2/angular2";
 // Import the exported todoInput class from src/app
-import {InputForm} from "./inputForm";
+import {InputForm} from "./components/inputForm";
 // UserService is initially an empty array
-import {UserService} from "./userService";
-import {UserList} from "./userList";
+import {UserService} from "./services/userService";
+import {UserList} from "./components/userList";
 
 @Component({
 	selector: 'tutorial-app'

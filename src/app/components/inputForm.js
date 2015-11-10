@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 // Imported the array of directives FORM_DIRECTIVES for use when creating forms.
 var angular2_1 = require("angular2/angular2");
-var userService_1 = require("./userService");
+var userService_1 = require("../services/userService");
 var InputForm = (function () {
     function InputForm(
         // Make user of the userService array

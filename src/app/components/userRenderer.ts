@@ -1,7 +1,7 @@
 // Imported NgClass so we can define the user-renderer component's template's appearance by a property of the model passed
 //  into the component.
 import {Component, View, Input, NgClass, NgIf} from "angular2/angular2";
-import {UserModel} from "./userService";
+import {UserModel} from "../services/userService";
 
 @Component({
 	selector: 'user-renderer'
